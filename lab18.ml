@@ -44,7 +44,7 @@ your prediction in the OCaml REPL. *)
 that you can use the results from earlier exercises in the later
 exercises.
 
-By way of example, we do the first couple of exercises for you to give
+By way of example, we do the first three exercises for you to give
 you the idea.
 
 ......................................................................
@@ -81,7 +81,9 @@ derivation for
 
 (*....................................................................
 Exercise 3. Carry out the derivation for the semantics of the
-expression `let x = 3 in x + 5` in an empty environment.
+expression `let x = 3 in x + 5` in an empty environment. You'll find
+the derivation from Exercise 2 to be useful, and you can appeal to it
+directly instead of rederiving it.
 ....................................................................*)
 
 (* ANSWER:
@@ -103,10 +105,9 @@ expression `let x = 3 in x + 5` in an empty environment.
 
    Extending {} with a mapping of x to 3 gives the environment {x →
    3}, which is exactly the environment that we use in line 3. The
-   generation of the extended environment is carried out implicitly,
-   the steps in doing so isn't spelled out explicitly here and needn't
-   be in your own derivations.
- *)
+   generation of the extended environment is carried out implicitly;
+   the steps in doing so aren't spelled out explicitly here and
+   needn't be in your own derivations.  *)
 
 (* Now it's your turn. We recommend doing these exercises with pencil
 on paper. Alternatively, you might share a Google doc and work on
@@ -211,7 +212,7 @@ initially empty environment.
 2.
 {} ⊢ let x = 2 * 25 in x + 1
        ⇓
-       | {} ⊢ 2 * 25 ⇓ 50                       (Exercise 10, #1)
+       | {} ⊢ 2 * 25 ⇓ 50                       (Exercise 8, #1)
        | {x ↦ 50} ⊢ x + 1 ⇓
        |                   | {x ↦ 50} x ⇓ 50   (R_var)
        |                   | {x ↦ 50} 1 ⇓ 1    (R_int)
@@ -349,9 +350,9 @@ evaluated in an initially empty environment.
 *)
 
 (*....................................................................
-Exercise 11: Evaluate the following expression using the LEXICAL
-environment semantic rules in Figure 19.2. Use an initially
-empty environment.
+Exercise 11: Evaluate the following expression, the same expression as
+in Exercise 9, but this time using the LEXICAL environment semantics
+rules in Figure 19.2. As before, use an initially empty environment.
 
     let x = 2 in 
     let f = fun y -> x + y in
@@ -383,10 +384,8 @@ empty environment.
        |   |   ⇓ 10                                                       (R_let)
        |   ⇓ 10                                                           (R_let)
        ⇓ 10                                                               (R_let)
-
-
-*)
-
+ *)
+       
 (*....................................................................
 Exercise 12: For the following expression, derive its value using the
 LEXICAL evaluation rules for imperative programming in Figure 19.4.
