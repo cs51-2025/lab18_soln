@@ -151,7 +151,8 @@ x to 8, following the rules in Figure 19.1.
 
 (* ANSWER:
 
-  {x ↦ 8} ⊢ (fun x -> x * x) (x - 2) ⇓
+  {x ↦ 8} ⊢ (fun x -> x * x) (x - 2)
+      ⇓
       | {x ↦ 8} ⊢ (fun x -> x * x) ⇓ (fun x -> x * x)   (R_fun)
       | {x ↦ 8} ⊢ x - 2 ⇓ 6                             (Exercise 5)
       | {x ↦ 6} ⊢ x * x ⇓ 36                            (Exercise 4)
@@ -362,7 +363,8 @@ rules in Figure 19.2. As before, use an initially empty environment.
 
 (* ANSWER:
 
-{} ⊢ let x = 2 in let f = fun y -> x + y in let x = 8 in f x ⇓
+{} ⊢ let x = 2 in let f = fun y -> x + y in let x = 8 in f x
+       ⇓
        | {} ⊢ 2 ⇓ 2                                                       (R_int)
        | {x ↦ 2} ⊢ let f = fun y -> x + y in let x = 8 in f x
        |   ⇓
